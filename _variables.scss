@@ -28,16 +28,17 @@ $button-active-color: radial-gradient(ellipse 90% 50% at top center,
     #8ACCED 45%,
     #4FA1D2 46%);
 
-// @font-face {
-//   font-family: 'Segoe';
-//   src: url('./fonts/Segoe\ UI.ttf') format('ttf');
-// }
+@font-face {
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tahoma'), url('https://fonts.cdnfonts.com/s/57171/tahoma.woff') format('woff');
+}
 
 * {
-  font-family: Tahoma, sans-serif;
+  font-family: 'Tahoma', sans-serif;
   font-size: 12px;
-  font-weight: 100;
-	color: #151c55;
+  color: #151c55;
 }
 
 // body {
