@@ -1,6 +1,8 @@
+![5112.css Logo](images/logo.png)
 # 🌄 5112.css *(still in super early stage of development)*
 
 **A web experience styled like Windows Vista Beta 1 (Build 5112)**
+![5112.css Screenshot](images/screenshot.png)
 
 Do you remember the iconic look of Windows Vista during its early development?  
 **5112.css** is a pure CSS framework that faithfully tries to recreate the UI style of **Windows Vista Beta 1 (Build 5112)** for use in modern web projects. Perfect for retro-inspired pages, UI mockups, or just pure geek nostalgia.
@@ -47,7 +49,7 @@ That’s it! Your HTML elements will now adopt the retro Vista look.
 
 ## 🧩 Basic Example
 
-You can see a live example at: 
+You can see a live example at: https://5112css.netlify.app
 
 ```html
 <!DOCTYPE html>
@@ -56,7 +58,7 @@ You can see a live example at:
 <head>
     <meta charset="UTF-8">
     <title>Vista 5112 Demo</title>
-    <link rel="stylesheet" href="5112.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -79,8 +81,6 @@ You can see a live example at:
 
 ```
 5112.css/
-├── images/          # Visual resources (not used yet)
-│   └── glass.png
 ├── _buttons.scss
 ├── _checkboxes.scss
 ├── _variables.scss
