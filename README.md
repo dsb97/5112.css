@@ -34,13 +34,13 @@ npm install -g sass
 Then compile:
 
 ```bash
-sass index.scss 5112.css
+sass index.scss index.css
 ```
 
 ### 3. Link the CSS in your project
 
 ```html
-<link rel="stylesheet" href="5112.css">
+<link rel="stylesheet" href="index.css">
 ```
 
 That’s it! Your HTML elements will now adopt the retro Vista look.
@@ -86,7 +86,7 @@ You can see a live example at:
 ├── _variables.scss
 ├── _window.scss
 ├── index.scss       # Main file
-└── test.html        # Example usage
+└── index.html       # Example usage
 ```
 
 ## 📜 License
