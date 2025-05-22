@@ -1,0 +1,46 @@
+$button-base-color: radial-gradient(ellipse 90% 50% at top center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  radial-gradient(ellipse 90% 50% at bottom center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  linear-gradient(to bottom,
+    #D9DDE0 45%,
+    #B8C4CE 46%);
+
+$button-hover-color: radial-gradient(ellipse 90% 50% at top center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  radial-gradient(ellipse 90% 50% at bottom center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  linear-gradient(to bottom,
+    #C9F6FF 45%,
+    #9ADDFF 46%);
+
+$button-active-color: radial-gradient(ellipse 90% 50% at top center,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  radial-gradient(ellipse 90% 50% at bottom center,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%),
+  linear-gradient(to bottom,
+    #8ACCED 45%,
+    #4FA1D2 46%);
+
+// @font-face {
+//   font-family: 'Segoe';
+//   src: url('./fonts/Segoe\ UI.ttf') format('ttf');
+// }
+
+* {
+  font-family: Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+	color: #151c55;
+}
+
+// body {
+//   background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef0430b7-a918-4d4a-85b4-76dcbba2e19d/dhutlpl-8d675317-51ee-4d03-95c5-a56a31593233.jpg/v1/fit/w_800,h_600,q_70,strp/windows_longhorn__5112_wallpaper_by_windows11user7_dhutlpl-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAwIiwicGF0aCI6IlwvZlwvZWYwNDMwYjctYTkxOC00ZDRhLTg1YjQtNzZkY2JiYTJlMTlkXC9kaHV0bHBsLThkNjc1MzE3LTUxZWUtNGQwMy05NWM1LWE1NmEzMTU5MzIzMy5qcGciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.BRkAYQ68qml4QYMyMB062jhu9z4cPHNOXwrjNb16TBA');
+//   background-size: cover;
+// }
