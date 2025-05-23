@@ -1,8 +1,8 @@
 .window {
     width: 400px;
     min-width: 400px;
-    height: 348px;
-    min-height: 348px;
+    height: fit-content;
+    min-height: 400px;
     padding: 30px 6px 6px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.6);
