@@ -1,0 +1,69 @@
+.window {
+    width: 400px;
+    min-width: 400px;
+    height: 348px;
+    min-height: 348px;
+    padding: 30px 6px 6px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+    background-image: url('./images/glass.png');
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    user-select: none;
+    cursor: default;
+
+    &>.title-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 12px);
+        height: 18px;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+
+        &>.title-text {
+            padding: 4px;
+            color: black;
+            text-shadow: 0 0 3px white;
+            box-sizing: border-box;
+        }
+
+        &>.nav-buttons>.close-button:only-child {
+            width: 37px;
+            height: 13px;
+            position: absolute;
+            top: 0;
+            right: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            background: linear-gradient(to bottom,
+                    rgba(255, 255, 255, 0.6) 0%,
+                    rgba(255, 255, 255, 0.4) 33%,
+                    rgba(0, 0, 0, 0.6) 34%);
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+        }
+
+        // .nav-buttons > .minimize + .close,
+        // .nav-buttons > .restore + .close {
+        //     background: red;
+        // }
+    }
+
+    &>.content {
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(240, 240, 240);
+        box-sizing: border-box;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+    }
+}

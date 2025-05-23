@@ -8,16 +8,78 @@
 </head>
 
 <body>
-    <input type="checkbox" name="checkboxes" id="checkbox1">
-    <label for="checkbox1">I agree to Microsoft's terms and conditions</label>
-    <br>
-    <input type="checkbox" name="checkboxes" id="checkbox2">
-    <label for="checkbox2">I agree to share device information with Microsoft for diagnostic purposes</label>
-    <br>
-    <br>
-    <input type="button" class="active" value="Accept" />
-    <input type="button" value="Cancel" />
-    <input disabled type="button" value="Apply" />
+    <article class="window">
+        <section class="title-bar" id="titleBar">
+            <section class="title-text">About this project</section>
+            <section class="nav-buttons">
+                <!-- <section class="min-button"></section>
+                <section class="toggle-button"></section> -->
+                <section class="close-button"></section>
+            </section>
+        </section>
+        <section class="banner"></section>
+        <section class="content">
+            <span>5112.css®
+                <br>
+                <br>
+                Version 0.0.1 (Build 5112.winmain_beta1.050720-1600)
+                <br>
+                <br>
+                © 2025 <a href="https://github.com/dsb97">dsb97</a>. All rights reserved.
+                <br>
+                <br>
+                The 5112.css software and its extremely mediocre code are not protected by any
+                trademarks, copyrights, or secret government patents. In fact, it's proudly released
+                under the MIT License — meaning you're free to copy it, distribute it, remix it, put
+                it on a T-shirt without fear of legal doom.
+                No lawyers were harmed (or hired) in the making of this software.
+                <br>
+                <br>
+                Evaluation copy. Expires <span id="time"></span>
+                <br>
+                <br>
+                <hr>
+                <input type="checkbox" name="checkboxes" id="checkbox1">
+                <label for="checkbox1">I agree with the things this guy says.</label>
+                <br>
+                <input type="checkbox" name="checkboxes" id="checkbox2">
+                <label for="checkbox2">I agree that build 5112 is the prettiest version ever released.</label>
+                <br>
+                <br>
+                <div style="text-align: right;">
+                    <input type="button" class="active" value="Accept" />
+                    <input type="button" value="Cancel" />
+                    <input disabled type="button" value="Apply" />
+                </div>
+            </span>
+        </section>
+    </article>
+
+    <script>
+        const div = document.getElementById("titleBar");
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        div.addEventListener("mousedown", function (e) {
+            isDragging = true;
+            offsetX = e.clientX - div.parentElement.offsetLeft;
+            offsetY = e.clientY - div.parentElement.offsetTop;
+            div.style.zIndex = 9999;
+        });
+
+        document.addEventListener("mousemove", function (e) {
+            if (isDragging) {
+                div.parentElement.style.left = e.clientX - offsetX + "px";
+                div.parentElement.style.top = e.clientY - offsetY + "px";
+            }
+        });
+
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+        });
+    </script>
+
 </body>
 
 </html>

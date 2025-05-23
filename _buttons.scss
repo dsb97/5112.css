@@ -9,16 +9,10 @@ input[type="button"] {
 	cursor: default;
 	position: relative;
 	overflow: hidden;
-
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-
-	text-shadow:
-    -1px -1px 0 rgba(255,255,255,0.6),
-     1px -1px 0 rgba(255,255,255,0.6),
-    -1px  1px 0 rgba(255,255,255,0.6),
-     1px  1px 0 rgba(255,255,255,0.6);
+    text-shadow: 0 0 3px white;
 
 	&:disabled,
 	&:hover:disabled {
