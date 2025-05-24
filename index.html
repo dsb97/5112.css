@@ -20,7 +20,7 @@
         <section class="banner">
             <img style="width: 100%; display: block;" src="./images/logo.png" alt="" srcset="">
         </section>
-        <section class="content">
+        <section class="content" style="text-align: justify;">
             <span>5112.css ®
                 <br>
                 <br>
@@ -36,6 +36,7 @@
                 it on a T-shirt without fear of legal doom.
                 No lawyers were harmed (or hired) in the making of this software.
                 <br>
+                <br>
                 Evaluation copy. Expires <span id="time"></span>
                 <br>
                 <br>
@@ -44,7 +45,7 @@
                 <input type="checkbox" name="checkboxes" id="checkbox1">
                 <label for="checkbox1">I agree with the things this guy says.</label>
                 <br>
-                <input type="checkbox" name="checkboxes" id="checkbox2">
+                <input type="checkbox" name="checkboxes" id="checkbox2" checked>
                 <label for="checkbox2">I agree that build 5112 is the prettiest version ever released.</label>
                 <br>
                 <br>
@@ -58,6 +59,10 @@
     </article>
 
     <script>
+        const f = new Date();
+        f.setDate(f.getDate() + 1);
+        document.getElementById("time").innerText = `${(d => d<10?'0'+d:d)(f.getDate())}/${(d => d<10?'0'+d:d)(f.getMonth()+1)}/${f.getFullYear()} ${(d => d<10?'0'+d:d)(f.getHours())}:${(d => d<10?'0'+d:d)(f.getMinutes())}`;
+
         const div = document.getElementById("titleBar");
 
         let isDragging = false;
