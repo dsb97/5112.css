@@ -13,7 +13,7 @@
             <section class="title-text">About this project</section>
             <section class="nav-buttons">
                 <button class="min-button"></button>
-                <button class="toggle-button"></button>
+                <button class="toggle-button" onclick="toggleFullScreen()"></button>
                 <button class="close-button"></button>
             </section>
         </section>
@@ -37,7 +37,7 @@
                 No lawyers were harmed (or hired) in the making of this software.
                 <br>
                 <br>
-                Evaluation copy. Expires <span id="time"></span>
+                Evaluation copy. Expires <span id="expirationTime"></span>
                 <br>
                 <br>
                 <hr>
@@ -58,10 +58,39 @@
         </section>
     </article>
 
+    <footer>
+        <article class="start" title="Start"></article>
+        <article class="quickAccess">
+            <img src="./images/icons/Desktop.png" alt="Desktop Logo" title="Desktop">
+            <img src="./images/icons/E-Mail.png" alt="Outlook Logo" title="Outlook">
+            <img src="./images/icons/Internet Explorer.png" alt="Internet Explorer Logo" title="Internet Explorer">
+        </article>
+        <article class="applications">
+            <section id="aboutThis" class="active">
+                <img src="./images/icons/Windows.png" alt="Windows Longhorn Logo">
+                About this project
+            </section>
+            <section id="aboutThis">
+                <img src="./images/icons/Pan setting.png" alt="Windows Longhorn Logo">
+                Control Panel
+            </section>
+            <section id="aboutThis">
+                <img src="./images/icons/My Music.png" alt="Windows Longhorn Logo">
+                My Music
+            </section>
+        </article>
+        <article class="tray">
+            <span id="currentTime" class="time">00:00</span>
+        </article>
+    </footer>
+
     <script>
+        document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0,5)
+        setInterval(() => document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0,5), 1000);
+
         const f = new Date();
         f.setDate(f.getDate() + 1);
-        document.getElementById("time").innerText = `${(d => d<10?'0'+d:d)(f.getDate())}/${(d => d<10?'0'+d:d)(f.getMonth()+1)}/${f.getFullYear()} ${(d => d<10?'0'+d:d)(f.getHours())}:${(d => d<10?'0'+d:d)(f.getMinutes())}`;
+        document.getElementById("expirationTime").innerText = `${(d => d < 10 ? '0' + d : d)(f.getDate())}/${(d => d < 10 ? '0' + d : d)(f.getMonth() + 1)}/${f.getFullYear()} ${(d => d < 10 ? '0' + d : d)(f.getHours())}:${(d => d < 10 ? '0' + d : d)(f.getMinutes())}`;
 
         const div = document.getElementById("titleBar");
 
@@ -85,6 +114,36 @@
         document.addEventListener("mouseup", function () {
             isDragging = false;
         });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement &&
+                !document.mozFullScreenElement &&
+                !document.webkitFullscreenElement &&
+                !document.msFullscreenElement) {
+                const elemento = document.documentElement;
+
+                if (elemento.requestFullscreen) {
+                    elemento.requestFullscreen();
+                } else if (elemento.mozRequestFullScreen) {
+                    elemento.mozRequestFullScreen();
+                } else if (elemento.webkitRequestFullscreen) {
+                    elemento.webkitRequestFullscreen();
+                } else if (elemento.msRequestFullscreen) {
+                    elemento.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
     </script>
 
 </body>
