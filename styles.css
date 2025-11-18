@@ -17,6 +17,8 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
   overflow: hidden;
+  height: 100dvh;
+  width: 100dvw;
 }
 
 input[type=button] {
@@ -121,9 +123,6 @@ input[type=checkbox]:checked + label::after {
 
 .window {
   z-index: 999;
-  width: 400px;
-  min-width: 400px;
-  min-height: 400px;
   padding: 21px 6px 6px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.6);
@@ -294,6 +293,8 @@ footer .quickAccess {
   justify-content: start;
 }
 footer .quickAccess > img {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,7 +303,6 @@ footer .quickAccess > img {
   width: 16px;
 }
 footer .quickAccess > img:hover {
-  border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   background-color: rgba(0, 0, 0, 0.4);
@@ -337,7 +337,7 @@ footer .applications > section.active {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 14px 4px rgba(0, 0, 0, 0.8) inset;
 }
 footer .applications > section:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: linear-gradient(16, 41, 117, 0.8);
 }
 footer .applications > section:active {
   box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.8) inset;
@@ -348,4 +348,4 @@ footer .tray {
 }
 footer .tray .time {
   color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=styles.css.map */
