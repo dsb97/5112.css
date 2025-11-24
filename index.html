@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Vista 5112 Demo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <section class="nav-buttons">
                 <button class="min-button"></button>
                 <button class="toggle-button" onclick="toggleFullScreen()"></button>
-                <button class="close-button"></button>
+                <button data-title="Close the current window" class="close-button"></button>
             </section>
         </section>
         <section class="banner">
@@ -59,23 +59,29 @@
     </article>
 
     <footer>
-        <article class="start" title="Start"></article>
+        <article class="start" data-title="Start"></article>
         <article class="quickAccess">
-            <img src="./images/icons/Desktop.png" alt="Desktop Logo" title="Show Desktop">
-            <img src="./images/icons/E-Mail.png" alt="Outlook Logo" title="Sends and receives e-mail and newsgroup messages">
-            <img src="./images/icons/Internet Explorer.png" alt="Internet Explorer Logo" title="Finds and displays information and web sites on the Internet">
+            <section data-title="Show Desktop">
+                <img src="./images/icons/Desktop.png" alt="Desktop Logo">
+            </section>
+            <section data-title="Sends and receives e-mail and newsgroup messages">
+                <img src="./images/icons/Outlook.png" alt="Outlook Logo">
+            </section>
+            <section data-title="Finds and displays information and web sites on the Internet">
+                <img src="./images/icons/Internet Explorer.png" alt="Internet Explorer Logo">
+            </section>
         </article>
         <article class="applications">
-            <section id="aboutThis" class="active">
-                <img src="./images/icons/Windows.png" alt="Windows Longhorn Logo">
+            <section class="active" data-title="About this project">
+                <img src="./images/icons/Windows.png" alt="Windows Logo">
                 About this project
             </section>
-            <section id="aboutThis">
-                <img src="./images/icons/Pan setting.png" alt="Windows Longhorn Logo">
+            <section id="Settings" data-title="Control Panel">
+                <img src="./images/icons/Pan setting.png" alt="Control Panel Icon">
                 Control Panel
             </section>
-            <section id="aboutThis">
-                <img src="./images/icons/My Music.png" alt="Windows Longhorn Logo">
+            <section id="MyMusic" data-title="My Music">
+                <img src="./images/icons/My Music.png" alt="Music Folder Icon">
                 My Music
             </section>
         </article>
@@ -85,8 +91,8 @@
     </footer>
 
     <script>
-        document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0,5)
-        setInterval(() => document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0,5), 1000);
+        document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0, 5)
+        setInterval(() => document.getElementById('currentTime').textContent = new Date().toTimeString().slice(0, 5), 1000);
 
         const f = new Date();
         f.setDate(f.getDate() + 1);
@@ -144,8 +150,13 @@
             }
         }
 
-    </script>
+        
 
+
+
+
+    </script>
+    <script src="code/code.js"></script>
 </body>
 
 </html>

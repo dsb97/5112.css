@@ -12,7 +12,7 @@
 }
 
 body {
-  background-image: url("./images/wallpaper.jpg");
+  background-image: url("../images/wallpaper.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -128,7 +128,7 @@ input[type=checkbox]:checked + label::after {
   border: 1px solid rgba(0, 0, 0, 0.6);
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-  background-image: url("./images/glass.png");
+  background-image: url("../images/glassVista.png");
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   position: absolute;
@@ -292,7 +292,7 @@ footer .quickAccess {
   align-items: center;
   justify-content: start;
 }
-footer .quickAccess > img {
+footer .quickAccess > section {
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   display: flex;
@@ -302,13 +302,17 @@ footer .quickAccess > img {
   height: 16px;
   width: 16px;
 }
-footer .quickAccess > img:hover {
+footer .quickAccess > section:hover {
   border: 1px solid rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   background-color: rgba(0, 0, 0, 0.4);
 }
-footer .quickAccess > img:active {
+footer .quickAccess > section:active {
   background-color: rgba(0, 0, 0, 0.8);
+}
+footer .quickAccess > section > img {
+  max-height: 16px;
+  max-width: 16px;
 }
 footer .applications {
   display: flex;
@@ -348,4 +352,21 @@ footer .tray {
 }
 footer .tray .time {
   color: #fff;
+}
+
+.tooltip-custom {
+  position: fixed;
+  padding: 5px 10px;
+  background-color: #f4f3f4;
+  color: #000;
+  border: 1px solid #d8d6d8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.tooltip-custom.show {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */
